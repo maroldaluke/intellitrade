@@ -927,18 +927,6 @@ def drawStockChart(app, canvas, stock):
         (cx, cy) = (currentDay[0], currentDay[1])
         (px, py) = (previousDay[0], previousDay[1])
         canvas.create_line(px, py, cx, cy, width = 2)
-    """
-    increment = 0
-    for day in range(1, len(data), 2):
-        #debug
-        currentDay = data[day]
-        previousDay = data[day - 1]
-        (cx, cy) = (currentDay[0], currentDay[1])
-        (px, py) = (previousDay[0], previousDay[1])
-        canvas.create_text(cx,cy, text= f"{stock[app.start + increment][3]}")
-        canvas.create_text(px,py, text= f"{stock[app.start + increment][0]}")
-        increment += 1
-    """
 
 def drawMacdChart(app, canvas, stock):
     mac = macd(stock)
